@@ -20,22 +20,40 @@
 
 		<h3>[name]([page:Array shapes], [page:Object options])</h3>
 		<div>
-		shapes — Shape or an array of shapes. <br />
+		shapes — A Shape or an array of shapes (<a href="href="javascript:window.parent.goTo('Shape')>THREE.SHAPE</a> Objects). <br />
 		options — Object that can contain the following parameters.
 
 	<ul>
-<li>curveSegments —  int. number of points on the curves</li>
-<li>steps —  int. number of points used for subdividing segements of extrude spline</li>
-<li>amount —  int. Depth to extrude the shape</li>
-<li>bevelEnabled —  bool. turn on bevel</li>
-<li>bevelThickness —  float. how deep into the original shape bevel goes</li>
-<li>bevelSize —  float. how far from shape outline is bevel</li>
-<li>bevelSegments —  int. number of bevel layers</li>
-<li>extrudePath —  THREE.CurvePath. 3d spline path to extrude shape along. (creates Frames if (frames aren't defined)</li>
-<li>frames —  THREE.TubeGeometry.FrenetFrames.  containing arrays of tangents, normals, binormals</li>
-<li>material —  int. material index for front and back faces</li>
-<li>extrudeMaterial —  int. material index for extrusion and beveled faces</li>
-<li>uvGenerator —  Object. object that provides UV generator functions</li>
+    <li>
+      curveSegments —  int. The number of segments that will be used when extruding a shape's curve.
+      The more segments used, the smoother the curves will look
+    </li>
+    <li>
+      steps —  int. The number of segments along the depth of the extrusion into which the extrusion will be divided.
+      A higher value will result in more individual faces. The default value is 1.
+    </li>
+    <li>amount —  int. How far (the depth) the shape should be extruded</li>
+    <li>bevelEnabled —  bool. turn on bevel</li>
+    <li>
+      bevelThickness —  float. The depth of the bevel (i.e.: how deep into the original shape bevel goes).
+      The bevel is the rounded corner between the front and back faces and the extrusion
+    </li>
+    <li>
+      bevelSize —  float. Distance between the bevel and the shape outline.
+      This determines the height of the bevel.
+    </li>
+    <li>
+      bevelSegments — int. The number of segments (layers) that will be use by the bevel.
+      The greater the number of segments used, the smoother the bevel will look.
+    </li>
+    <li>
+      extrudePath —  THREE.CurvePath. 3d spline path to extrude shape along. (creates Frames if (frames aren't defined)
+      If this isn't specifed, the shape is extruded along the z-axis.
+    </li>
+    <li>frames —  THREE.TubeGeometry.FrenetFrames.  containing arrays of tangents, normals, binormals</li>
+    <li>material —  int. material index for front and back faces</li>
+    <li>extrudeMaterial —  int. material index for extrusion and beveled faces</li>
+    <li>uvGenerator —  Object. object that provides UV generator functions</li>
 	</ul>
 
 		</div>
